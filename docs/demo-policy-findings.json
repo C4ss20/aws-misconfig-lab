@@ -1,0 +1,20 @@
+{
+  "policy_file": "overly-permissive-policy.json",
+  "scope": "Offline structural checks; not effective-permission analysis",
+  "findings": [
+    {
+      "severity": "CRITICAL",
+      "check_id": "IAM-001",
+      "statement": 1,
+      "finding": "Wildcard high-privilege actions over all resources",
+      "remediation": "Replace with an allowlist of actions and ARNs; validate with IAM Access Analyzer."
+    },
+    {
+      "severity": "HIGH",
+      "check_id": "IAM-003",
+      "statement": 2,
+      "finding": "Identity/role privilege-management actions over all resources",
+      "remediation": "Scope affected role/policy resources, set conditions, review privilege escalation pathways."
+    }
+  ]
+}
